@@ -28,6 +28,22 @@ describe('sum', () => {
 
 describe('multiply', () => {
   // write tests! <================================================
+  it('throw error if it receives a single argument', () => {
+    expect(() => helpers.multiply(1)).toThrow();
+  });
+  it('multiplies positive number correctly', () => {
+    expect(helpers.multiply(2, 3)).toBe(6);
+  });
+  it('multiplies negative numbers correctly', () => {
+    expect(helpers.multiply(-2, -3)).toBe(6);
+  });
+  it('throw error if number is a string', () => {
+    expect(() => helpers.multiply('2', '3')).toThrow();
+  });
+  it('return null if fed no argument', () => {
+    expect(helpers.multiply()).toBe(null);
+  })
+
 });
 
 describe('personMaker', () => {
